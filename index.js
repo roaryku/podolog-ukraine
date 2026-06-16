@@ -95,18 +95,16 @@ if (prefersReducedMotion) {
     });
 } else {
     if (homeSection || homeContent) {
-        requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-                if (homeSection) {
-                    homeSection.classList.add('is-visible');
-                }
+    requestAnimationFrame(() => {
+        if (homeSection) void homeSection.offsetHeight;
+        if (homeContent) void homeContent.offsetHeight;
 
-                if (homeContent) {
-                    homeContent.classList.add('is-visible');
-                }
-            });
-        });
-    }
+        setTimeout(() => {
+            if (homeSection) homeSection.classList.add('is-visible');
+            if (homeContent) homeContent.classList.add('is-visible');
+        }, 60);
+    });
+}
 
     const sectionObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
