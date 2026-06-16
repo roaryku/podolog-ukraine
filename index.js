@@ -96,13 +96,15 @@ if (prefersReducedMotion) {
 } else {
     if (homeSection || homeContent) {
         requestAnimationFrame(() => {
-            if (homeSection) {
-                homeSection.classList.add('is-visible');
-            }
+            requestAnimationFrame(() => {
+                if (homeSection) {
+                    homeSection.classList.add('is-visible');
+                }
 
-            if (homeContent) {
-                homeContent.classList.add('is-visible');
-            }
+                if (homeContent) {
+                    homeContent.classList.add('is-visible');
+                }
+            });
         });
     }
 
