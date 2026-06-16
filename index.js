@@ -1,5 +1,6 @@
 const back = document.querySelector('#back');
 const next = document.querySelector('#next');
+const slideImage = document.querySelector('#slide');
 
 const photos = 
    ["certificates/certificat_1.jpeg", 
@@ -11,12 +12,13 @@ const photos =
 
     let i=0;
 
+if (next && back && slideImage) {
     next.addEventListener('click', () => {
         i++;
         if(i > photos.length - 1){
             i = 0;
         }
-        document.querySelector('#slide').src = photos[i];
+        slideImage.src = photos[i];
     });
 
     back.addEventListener('click', () => {
@@ -24,8 +26,9 @@ const photos =
         if(i < 0){
             i = photos.length - 1;
         }
-        document.querySelector('#slide').src = photos[i];
+        slideImage.src = photos[i];
     });
+}
 
 const homeSection = document.querySelector('#container-home');
 const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
@@ -36,7 +39,7 @@ const revealSections = document.querySelectorAll(revealSectionsSelector);
 const homeContent = document.querySelector('.home-content');
 const revealItems = [
     { selector: '.services-container .service-style', step: 55, cap: 320 },
-    { selector: '.price-grid .price-card', step: 85, cap: 520 },
+    { selector: '.price-grid .price-card, .price-grid .menu-btn', step: 85, cap: 520 },
     { selector: '.reviewa-container .review-item', step: 120, cap: 700 }
 ];
 const revealTextItems = [
