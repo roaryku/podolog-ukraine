@@ -49,13 +49,7 @@ const revealTextItems = [
 ];
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if (homeSection) {
-    homeSection.classList.add('home-section-reveal');
-}
-
-if (homeContent) {
-    homeContent.classList.add('home-content-reveal');
-}
+// Hidden state is applied directly in CSS on #container-home and .home-content
 
 revealItems.forEach(({ selector, step, cap }) => {
     const items = document.querySelectorAll(selector);

@@ -17,30 +17,34 @@ body {
   filter: blur(0);
 }
 
-.home-section-reveal {
+#container-home {
   opacity: 0;
   transform: translateY(42px);
   filter: blur(0.9px);
-  transition: opacity 2s cubic-bezier(0.22, 0.61, 0.36, 1), transform 2s cubic-bezier(0.22, 0.61, 0.36, 1), filter 2s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: opacity 2s cubic-bezier(0.22, 0.61, 0.36, 1),
+              transform 2s cubic-bezier(0.22, 0.61, 0.36, 1),
+              filter 2s cubic-bezier(0.22, 0.61, 0.36, 1);
   will-change: opacity, transform, filter;
 }
 
-.home-section-reveal.is-visible {
+#container-home.is-visible {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
 }
 
-.home-content-reveal {
+.home-content {
   opacity: 0;
   transform: translateX(-72px);
   filter: blur(0.6px);
-  transition: opacity 2.15s cubic-bezier(0.22, 0.61, 0.36, 1), transform 2.15s cubic-bezier(0.22, 0.61, 0.36, 1), filter 2.15s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: opacity 2.15s cubic-bezier(0.22, 0.61, 0.36, 1),
+              transform 2.15s cubic-bezier(0.22, 0.61, 0.36, 1),
+              filter 2.15s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition-delay: 100ms;
   will-change: opacity, transform, filter;
 }
 
-.home-content-reveal.is-visible {
+.home-content.is-visible {
   opacity: 1;
   transform: translateX(0);
   filter: blur(0);
@@ -72,8 +76,8 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .section-reveal,
-  .home-section-reveal,
-  .home-content-reveal,
+  #container-home,
+  .home-content,
   .reveal-item {
     opacity: 1;
     transform: none;
