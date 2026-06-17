@@ -2,14 +2,28 @@ const back = document.querySelector('#back');
 const next = document.querySelector('#next');
 const slideImage = document.querySelector('#slide');
 
+const reviewBack = document.querySelector('#review-back');
+const reviewNext = document.querySelector('#review-next');
+const reviewSlide = document.querySelector('.review-slide');
+
 const photos = 
 ["certificates/certificat_1.jpeg", 
 "certificates/certificat_2.jpeg",
 "certificates/certificat_3.png",
 "certificates/certificat_4.jpg",
 "certificates/certificat_5.jpg",
+"certificates/certificat_6.jpg"
 ];
-let i=0;
+
+const reviews = [
+    "photos/review_1.JPG",
+    "photos/review_2.JPG",
+    "photos/review_3.JPG",
+    "photos/review_4.JPG",
+    "photos/review_5.jpeg"
+]
+
+let i = 0;
 if (next && back && slideImage) {
 next.addEventListener('click', () => {
 i++;
@@ -24,6 +38,24 @@ if(i < 0){
 i = photos.length - 1;
 }
 slideImage.src = photos[i];
+});
+}
+
+let j = 0;
+if (reviewNext && reviewBack && reviewSlide) {
+reviewNext.addEventListener('click', () => {
+j++;
+if(j > reviews.length - 1){
+j = 0;
+}
+reviewSlide.src = reviews[j];
+});
+reviewBack.addEventListener('click', () => {
+j--;
+if(j < 0){
+j = reviews.length - 1;
+}
+reviewSlide.src = reviews[j];
 });
 }
 

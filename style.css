@@ -443,17 +443,21 @@ border: none;
 }
 .reviewa-container{
 display: flex;
-flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 12px;
+/* display: flex;
+justify-content: center;
+align-content: center;
 flex-wrap: wrap;
-justify-content: space-around;
-gap: 20px;
-padding: 40px;
+position: relative; */
 }
+
 .review-item{
-flex: 1 1 320px;          
+           
 max-width: 360px;
 position: relative;
-overflow: visible;
+margin-top: 30px;
 background-color: #fefefc;
 border: 1px solid #284563;
 border-radius: 5px;
@@ -484,10 +488,8 @@ color: #2C3E50;
 line-height: 1.2;
 z-index: 2;
 }
-.image-review{
-width: 250px;
-height: auto;
-margin: 20px auto 10px;
+.review-slide{
+width: 300px;
 }
 .contacts-container{
 display: flex;
@@ -783,6 +785,7 @@ align-items: flex-start;
 .benefit-item img.icon {
 margin-top: 2px;
 }
+
 }
 
 @media (max-width: 400px) {
