@@ -97,7 +97,39 @@ background-size: cover;
 background-position: top;
 height: 100 auto;
 }
-#container-services{
+
+#container-services {
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap;
+  height: auto;
+  min-height: 60vh;
+  padding-top: 40px;
+  /* no isolation, no background-image here */
+}
+
+#container-services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(photos/price-background.png);
+  background-size: cover;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  opacity: 0.5; /* control image opacity here */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.services-header,
+.services-container,
+.service-style {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* #container-services{
 background-image: url(photos/price-background.png);
 background-size: cover;
 background-position: left bottom;
@@ -116,7 +148,9 @@ position: absolute;
 inset: 0;
 background: rgba(249, 247, 247, 0.30);
 z-index: -1;
-}
+} */
+
+
 #container-reviews{
 padding: 60px 40px;
 background-color: #fefefd;
@@ -690,23 +724,36 @@ line-height: 1.5;
 .services-header {
 padding: 0 20px;
 }
-#container-services{
+/* #container-services{
 position: relative;
+min-height: 80vh;
+isolation: isolate;
+overflow: hidden; */
+/* position: relative;
 background-image: url(photos/price-background.png);
 background-size: cover;
 background-position: left bottom;
 background-repeat: no-repeat;
 background-attachment: fixed;
-min-height: 80vh;
-}
+min-height: 80vh; */
+/* }
 #container-services::before {
-content: "";
+      content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url(photos/price-background.png);
+  background-size: cover;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none; */
+/* content: "";
 position: absolute;
 inset: 0;
 background: rgba(249, 247, 247, 0.30);
-z-index: 0;
-}
-#container-services .services-header,
+z-index: 0; */
+/* } */
+/* #container-services .services-header,
 #container-services .services-container {
 position: relative;
 z-index: 1;
@@ -717,7 +764,7 @@ opacity: 1;
 transform: none;
 filter: none;
 transition: none;
-}
+} */
 .prices {
 display: none;
 }
@@ -815,32 +862,6 @@ inset: 0;
 background: rgba(255, 255, 255, 0.513);
 z-index: -1;
 }
-/* #container-services {
-  position: relative;
-  min-height: 80vh;
-}
-
-/* Use a pseudo-element for the fixed background */
-/* #container-services::before {
-  content: '';
-  position: fixed;          /* Fixed to viewport */
-  /* top: 0;
-  left: 0;  */
-  /* width: 100%;
-  height: 100%; */
-  /* background-image: url(photos/price-background.png);
-  background-size: cover;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  z-index: 0; 
-   pointer-events: none;             
-}  */
-
-/* Make sure your cards sit above the background */
-/* #container-services > * {
-  position: relative;
-  z-index: 1;
-} */
 #container-prices .price-card {
 width: 100%;
 padding: 12px 10px;
