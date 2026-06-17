@@ -780,7 +780,14 @@ align-items: flex-start;
 margin-top: 2px;
 }
 .review-slide{
-width: 200px;
+width: 250px;
+}
+.reviewa-container{
+padding: 20px 10px;
+gap: 8px;
+}
+.review-item{
+padding: 10px 0px 0px;
 }
 
 }
@@ -852,9 +859,8 @@ flex-shrink: 0;
 padding: 4px 8px;
 }
 .reviewa-container{
-justify-content: center;
 padding: 20px 10px;
-gap: 40px;
+gap: 8px;
 }
 .review-item{
 flex: 1 1 100%;
