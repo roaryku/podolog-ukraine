@@ -6,6 +6,9 @@ const reviewBack = document.querySelector('#review-back');
 const reviewNext = document.querySelector('#review-next');
 const reviewSlide = document.querySelector('.review-slide');
 
+const servicesBg = document.querySelector('#container-services');
+const section = servicesBg.getBoundingClientRect();
+
 const photos = 
 ["certificates/certificat_1.jpeg", 
 "certificates/certificat_2.jpeg",
@@ -58,6 +61,14 @@ j = reviews.length - 1;
 reviewSlide.src = reviews[j];
 });
 }
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const sectionTop = servicesBg.offsetTop;
+  const offset = scrolled - sectionTop;
+  
+  servicesBg.style.backgroundPositionY = `calc(left bottom + ${offset * 0.3}px)`;
+});
 
 const homeSection = document.querySelector('#container-home');
 const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
