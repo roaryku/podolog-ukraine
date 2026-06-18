@@ -109,80 +109,12 @@ height: 100 auto;
   background-position: left bottom;
   background-repeat: no-repeat;
 }
-
-/* #container-services {
-  position: relative;
-  overflow: hidden;
-  flex-wrap: wrap;
-  height: auto;
-  min-height: 60vh;
-  padding-top: 40px;
-  transform: translateZ(0);
-}
-
-#container-services::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url(photos/price-background.png);
-  background-size: cover;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  opacity: 0.8;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.services-header,
-.services-container,
-.service-style {
-  position: relative;
-  z-index: 1;
-}  */
-
-
-/* #container-services::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url(photos/price-background.png);
-  background-size: cover;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  opacity: 0.8;
-  z-index: 0;
-  pointer-events: none;
-} */
-
 .services-header,
 .services-container,
 .service-style {
   position: relative;
   z-index: 2;
 }
-
-
-/* #container-services{
-background-image: url(photos/price-background.png);
-background-size: cover;
-background-position: left bottom;
-background-attachment: fixed;
-background-repeat: no-repeat;
-flex-wrap: wrap;
-height: auto;
-min-height: 60vh;
-padding-top: 40px;
-position: relative;
-isolation: isolate;
-}
-#container-services::before {
-content: "";
-position: absolute;
-inset: 0;
-background: rgba(249, 247, 247, 0.30);
-z-index: -1;
-} */
-
 
 #container-reviews{
 padding: 60px 40px;
@@ -911,6 +843,17 @@ width: 100%;
 max-width: 280px;
 display: block;
 margin: 20px auto 10px;
+}
+#container-prices .price-card h3 {
+font-size: 12px;
+}
+#container-prices .price-card p {
+margin: 0 0 5px;
+font-size: 14px;
+}
+#container-prices .price-card span {
+font-size: 12px;
+font-weight: 400;
 }
 }
 
