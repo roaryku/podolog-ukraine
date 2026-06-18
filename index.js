@@ -15,7 +15,7 @@ const photos =
 "certificates/certificat_3.png",
 "certificates/certificat_4.jpg",
 "certificates/certificat_5.jpg",
-"certificates/certificat_6.jpg"
+"certificates/certificat_6.png"
 ];
 
 const reviews = [
