@@ -757,9 +757,6 @@ width: 250px;
 padding: 20px 10px;
 gap: 8px;
 }
-.review-item{
-margin-top: 30px;
-}
 
 .review-slide{
 width: 250px;
@@ -854,6 +851,9 @@ font-size: 16px;
 #container-prices .price-card p {
 margin: 0 0 5px;
 font-size: 14px;
+}
+.reviewa-container{
+gap: 20px;
 }
 
 }
