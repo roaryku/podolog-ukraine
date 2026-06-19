@@ -442,8 +442,8 @@ border: none;
 }
 .reviewa-container{
 display: flex;
-justify-content: center;
-align-items: center;
+justify-content: space-evenly;
+flex-wrap: wrap;
 gap: 12px;
 }
 
@@ -760,7 +760,10 @@ gap: 8px;
 .review-item{
 padding: 10px 0px 0px;
 }
+.review-slide{
+width: 250px;
 
+}
 }
 
 @media (max-width: 400px) {
