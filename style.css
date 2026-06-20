@@ -117,7 +117,7 @@ height: 100 auto;
 }
 
 #container-reviews{
-padding: 60px 40px;
+padding: 0px 20px;
 background-color: #fefefd;
 }
 #container-why-me{
@@ -411,7 +411,7 @@ font-family: "Playfair Display", serif;
 color: #2C3E50;
 font-size: 28px;
 font-weight: bold;
-text-align: start;
+text-align: center;
 margin-top: 0;
 padding: 60px;
 }
@@ -420,9 +420,8 @@ font-family: "Montserrat", sans-serif;
 color: #2C3E50;
 font-size: 16px;
 font-weight: normal;
-text-align: start;
-margin-left: 60px;
-margin-top: -50px;
+text-align: center;
+margin-top: -60px;
 }
 .image-cert{
 width: 400px;
@@ -455,18 +454,6 @@ border: 1px solid #284563;
 border-radius: 5px;
 padding: 20px 16px 16px;
 }
-/* .review-item::before {
-content: attr(data-label);
-position: absolute;
-top: 0;
-left: 12px;
-transform: translateY(-50%);
-background: #fefefc; 
-padding: 0 15px;
-font-size: 14px;
-font-weight: 600;
-color: #2C3E50;
-} */
 .review-label{
 position: absolute;
 top: 0;
@@ -619,39 +606,27 @@ margin-bottom: 20px;
     display: block;
     text-align: center;      
     font-size: 18px; 
-    /* padding: 10px 20px;  /* ← matches accordion-button padding */
-    /* margin: 10px auto;     */ 
 }
-/* Change the default Bootstrap blue focus/active color to your hover color */
 .accordion-button:not(.collapsed) {
-    color: #ffffff;           /* ← text color when open */
-    background-color: #6FA3C8; /* ← your blue when expanded */
-    box-shadow: none;          /* ← removes Bootstrap's blue outline */
+    color: #ffffff;          
+    background-color: #6FA3C8;
+    box-shadow: none;          
 }
-
-/* Remove the default blue focus outline */
 .accordion-button:focus {
     box-shadow: none;
     border-color: transparent;
 }
-/* .faq-section {
-    margin: 20px auto;
-    max-width: 900px;
-} */
 .accordion-button{
 color: #2C3E50;
 font-family: "Montserrat", sans-serif;
 font-weight: 600;
 } 
-/* .accordion-button:hover{
-background-color: #6FA3C8;
-color: #ffffff;transition: 0.3s ease;
-padding: 10px 20px;
-margin: 10px auto;
-} */
 .accordion-body{
   color: #2C3E50;
   font-family: "Montserrat", sans-serif;
+}
+.accordion{
+  margin-top: 30px;
 }
 
 @media (max-width: 1100px) and (min-width: 769px) {
