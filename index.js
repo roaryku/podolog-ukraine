@@ -75,6 +75,8 @@ const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
 
 const revealSectionsSelector = isMobileViewport
 ? 'section[id^="container-"]:not(#container-home):not(#container-services)'
+: 'section[id^="container-"]:not(#container-home)'
+? 'section[id^="container-"]:not(#container-home):not(#container-services)'
 : 'section[id^="container-"]:not(#container-home)';
 
 const revealSections = document.querySelectorAll(revealSectionsSelector);
@@ -89,7 +91,8 @@ const revealItems = [
 const revealTextItems = [
 { selector: '#container-about .title-aboutMe, #container-about .about-header, #container-about .about-par', step: 70, cap: 700 },
 { selector: '#container-why-me .title-aboutMe, #container-why-me .benefit-item, #container-why-me .why-me-btn', step: 90, cap: 720 },
-{ selector: '#container-contacts .contacts-item h5, #container-contacts .contacts-item h6, #container-contacts .contacts-item p, #container-contacts .contacts-item .social-media .contact-me', step: 55, cap: 520 }
+{ selector: '#container-contacts .contacts-item h5, #container-contacts .contacts-item h6, #container-contacts .contacts-item p, #container-contacts .contacts-item .social-media .contact-me', step: 55, cap: 520 },
+{ selector: '#container-faq .header-certificates, #container-faq .par-certificates, #container-faq .accordion-item, #container-faq code, #container-faq a', step: 80, cap: 500 }
 ];
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
